@@ -8,27 +8,25 @@
     </head>
     <body>
         <header class="header">
-            <img src="./eisenhower-matrix.jpg" alt="header img">
+            <img  class="header_img" src="./eisenhower-matrix.jpg" alt="header img">
             <a class="more_info" href="https://goal-life.com/page/method/matrix-eisenhower">
                 Want more details?;
             </a>
         </header>
         <div class="container">
                 <section id="new-task">
-                    <label for="new-task__title">Add Item</label>
+                    <label class="section_title title_new-task">Add Item</label>
                     <div class="task-row__wrapper">
-                        <input type="text"
-                               id="new-task"
-                               class="task">
+                        <input type="text" id="new-task" class="text_input task">
                         <button>Add</button>
                     </div>
                 </section>
-            <h3>Todo</h3>
+            <h3 class="section_title">Todo</h3>
             <ul id="incomplete-tasks">
                 <li>
                     <input type="checkbox">
                     <label class="task">Pay Bills</label>
-                    <input type="text">
+                    <input class="text_input" type="text">
                     <button class="edit">Edit</button>
                     <button class="delete">
                         <img src="./remove.svg" alt="remove icon">
@@ -37,23 +35,21 @@
                 <li class="edit-mode">
                     <input type="checkbox">
                     <label class="task">Go Shopping</label>
-                    <input type="text"
-                           class="task"
-                           value="Go Shopping">
+                    <input class="text_input task" type="text" value="Go Shopping">
                     <button class="edit">Save</button>
                     <button class="delete">
                         <img src="./remove.svg" alt="remove icon">
                     </button>    
                 </li>    
             </ul>    
-            <h3>Completed</h3>    
+            <h3 class="section_title">Completed</h3>    
             <ul id="completed-tasks">    
                 <li>
                     <input type="checkbox" checked>
                     <label class="task">See the Doctor</label>
                     <input type="text"
                            class="task">
-                    <button class="edit">Edit</button>    
+                    <button class="text_input edit">Edit</button>    
                     <button class="delete">
                         <img src="./remove.svg" alt="remove icon">
                     </button>    
