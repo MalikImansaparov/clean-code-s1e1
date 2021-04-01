@@ -20,7 +20,7 @@ var createNewTaskElement = function(taskString){
     var listItem = document.createElement("li");
 
     //input (checkbox)
-    var checkBox = document.createElement("input");//checkbox
+    var checkBox = document.createElement("input");//checkbx
     //label
     var label = document.createElement("label");//label
     //input (text)
@@ -33,7 +33,7 @@ var createNewTaskElement = function(taskString){
     var deleteButtonImg = document.createElement("img");//delete button image
 
     label.innerText = taskString;
-    label.className = "task";
+    label.className = 'task';
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
@@ -44,7 +44,7 @@ var createNewTaskElement = function(taskString){
     editButton.className = "edit";
 
     deleteButton.className = "delete";
-    deleteButtonImg.src = "./remove.svg";
+    deleteButtonImg.src = './remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -59,30 +59,30 @@ var createNewTaskElement = function(taskString){
 
 
 
-var addTask = function(){
+var addTask=function(){
     console.log("Add Task...");
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
-    var listItem = createNewTaskElement(taskInput.value);
+    var listItem=createNewTaskElement(taskInput.value);
 
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
 
-    taskInput.value = "";
+    taskInput.value="";
 
 }
 
 //Edit an existing task.
 
-var editTask = function(){
+var editTask=function(){
     console.log("Edit Task...");
     console.log("Change 'edit' to 'save'");
 
 
     var listItem = this.parentNode;
 
-    var editInput = listItem.querySelector("input[type=text]");
+    var editInput = listItem.querySelector('input[type=text]');
     var label = listItem.querySelector("label");
     var editBtn = listItem.querySelector(".edit");
     var containsClass = listItem.classList.contains("editMode");
@@ -108,7 +108,7 @@ var deleteTask = function(){
     console.log("Delete Task...");
 
     var listItem = this.parentNode;
-    var ul = listItem.parentNode;
+    var ul=listItem.parentNode;
     //Remove the parent list item from the ul.
     ul.removeChild(listItem);
 
@@ -170,7 +170,7 @@ var bindTaskEvents = function(taskListItem,checkBoxEventHandler){
 
 //cycle over incompleteTaskHolder ul list items
 //for each list item
-for (var i = 0; i<incompleteTaskHolder.children.length;i++){
+for (var i=0; i<incompleteTaskHolder.children.length;i++){
 
     //bind events to list items chldren(tasksCompleted)
     bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
@@ -180,7 +180,7 @@ for (var i = 0; i<incompleteTaskHolder.children.length;i++){
 
 
 //cycle over completedTasksHolder ul list items
-for (var i = 0; i<completedTasksHolder.children.length;i++){
+for (var i=0; i<completedTasksHolder.children.length;i++){
     //bind events to list items chldren(tasksIncompleted)
     bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
